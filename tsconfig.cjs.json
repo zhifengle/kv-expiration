@@ -1,5 +1,6 @@
 {
   "extends": "./tsconfig.json",
+  "sourceMap": false,
   "compilerOptions": {
     "module": "commonjs",
     "target": "es2020",

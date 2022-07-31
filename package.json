@@ -18,6 +18,14 @@
     "storage"
   ],
   "author": "22earth",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/22earth/kv-expiration",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:22earth/kv-expiration.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^28.1.6",
