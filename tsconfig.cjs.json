@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
-  "sourceMap": false,
   "compilerOptions": {
+    "sourceMap": false,
     "module": "commonjs",
     "target": "es2020",
     "outDir": "./dist/cjs"
