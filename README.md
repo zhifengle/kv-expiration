@@ -6,9 +6,9 @@ If you just want to use `localStorage`, you can use [lscache](https://github.com
 
 ## Usage
 
+```shell
 npm i kv-expiration
-
-buitin key-value storage engine: JsonEngine, GmEngine, LsEngine
+```
 
 ```javascript
 import { KvExpiration, JsonEngine, GmEngine } from 'kv-expiration';
@@ -31,6 +31,20 @@ kv.set(
   }
 );
 ```
+
+Built-in key-value storage engine: `JsonEngine`, `GmEngine`, `LsEngine`
+
+### JsonEngine
+
+Use local json file for storage.
+
+### LsEngine
+
+Use localStorage
+
+### GmEngine
+
+Use userscript manager's API: GM_setValue, GM_getValue, GM_listValues and GM_deleteValue
 
 ### Custom Engine
 
