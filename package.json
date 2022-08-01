@@ -1,6 +1,6 @@
 {
   "name": "kv-expiration",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A key-value storage with expiration time",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -10,6 +10,7 @@
     "build:cjs": "tsc -b ./tsconfig.cjs.json",
     "build:esm": "tsc -b ./tsconfig.esm.json",
     "build:types": "tsc -b ./tsconfig.types.json && shx cp src/*.d.ts dist/types",
+    "publish": "npm run build && npm publish",
     "test": "jest --all"
   },
   "keywords": [
