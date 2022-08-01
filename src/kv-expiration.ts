@@ -10,7 +10,7 @@ type TimeOpt =
       ms?: number;
     };
 
-function getMilliseconds(opt: TimeOpt): number {
+export function getMilliseconds(opt: TimeOpt): number {
   if (typeof opt === 'number') {
     const oneDay = 24 * 60 * 60 * 1000;
     return oneDay * opt;

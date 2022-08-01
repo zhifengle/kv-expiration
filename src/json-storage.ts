@@ -17,10 +17,18 @@ export class JsonEngine implements KvEngine {
       config = {};
     }
     this.config = config;
+    process.on('exit', (code) => {
+      this.write();
+    });
+    process.on('SIGINT', () => {
+      this.write();
+    });
+    process.on('SIGTERM', () => {
+      this.write();
+    });
   }
   set(key: string, value: any): boolean {
     this.config[key] = value;
-    this.writeFile(this.filename, this.config);
     return true;
   }
   get(key: string) {
@@ -28,7 +36,6 @@ export class JsonEngine implements KvEngine {
   }
   remove(key: string): void {
     this.config[key] = undefined;
-    this.write();
   }
   keys(): string[] {
     return Object.keys(this.config);
