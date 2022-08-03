@@ -1,5 +1,6 @@
-export { KvExpiration } from './kv-expiration';
+export * from './kv-expiration';
 export { GmEngine } from './gm';
 export { LsEngine } from './local-storage';
 export { JsonEngine } from './json-storage';
-export { KvEngine } from './types';
+export { JsonEngineAsync } from './json-storage-async';
+export { KvEngine, KvEngineAsync } from './types';

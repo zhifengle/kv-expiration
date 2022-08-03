@@ -1,10 +1,10 @@
 {
   "name": "kv-expiration",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A key-value storage with expiration time",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
-  "types": "./dist/types",
+  "types": "./dist/types/index.d.ts",
   "scripts": {
     "build": "shx rm -rf dist && npm run build:types && npm run build:esm && npm run build:cjs",
     "build:cjs": "tsc -b ./tsconfig.cjs.json",

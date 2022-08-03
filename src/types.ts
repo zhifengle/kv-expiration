@@ -4,3 +4,10 @@ export interface KvEngine {
   remove(key: string): void;
   keys(): string[];
 }
+
+export interface KvEngineAsync {
+  set(key: string, value: any): Promise<boolean>;
+  get(key: string): Promise<any>;
+  remove(key: string): Promise<void>;
+  keys(): Promise<string[]>;
+}

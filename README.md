@@ -32,6 +32,25 @@ kv.set(
 );
 ```
 
+```javascript
+import { KvExpirationAsync, JsonEngineAsync } from 'kv-expiration';
+// if you storage engine's API is async.
+// for example: engine.set('foo', 'bar') return a Promise
+
+async function test() {
+  const engine = new JsonEngineAsync('my-storage-async.json');
+  const kv = new KvExpirationAsync(
+    engine,
+    'MY_PREFIX_',
+    'SOME_SUFFIX',
+    'BUCKET'
+  );
+  await kv.set('foo', 'bar', 1);
+  const v = await kv.get('foo');
+  console.log(v); // bar
+}
+```
+
 Built-in key-value storage engine: `JsonEngine`, `GmEngine`, `LsEngine`
 
 ### JsonEngine
